@@ -1,0 +1,35 @@
+{
+  "name": "hubble-sleep-sounds",
+  "version": "1.0.2",
+  "description": "Hubbles module to play sounds for background noise",
+  "main": "build/lit.js",
+  "author": "Jamie Smith",
+  "hubbles":{
+    "name": "sleep-sounds",
+    "description": "Play nature and calm sounds for sleep or background noise",
+    "site": "https://github.com/jsmithdev/hubble-sleep-sounds",
+    "icon": "https://raw.githubusercontent.com/jsmithdev/hubble-sleep-sounds/main/resources/icon.svg?raw=true",
+    "executable": "https://unpkg.com/hubble-sleep-sounds@1.0.1/build/lit.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:tw": "tailwindcss -i ./src/tailwind.css -o ./src/tw.css",
+    "build:twlit": "twlit --input ./src/tw.css --output ./src/tw.js",
+    "build:js": "rollup -c",
+    "build:all": "npm run build:tw && npm run build:twlit && npm run build:js",
+    "watch": "concurrently \"npm run build:tw\" \"npm run build:twlit\" \"npm run build:js\"",
+    "dev": "concurrently \"tailwindcss -i ./src/tailwind.css -o ./src/tw.css --watch\" \"twlit --output ./src/twlit.js --input ./src/tw.css  --watch\" \"rollup -c --watch\""
+  },
+  "dependencies": {
+    "lit": "^3.1.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "concurrently": "^8.2.2",
+    "rollup": "^4.9.6",
+    "tailwindcss": "^3.4.1",
+    "twlit": "^0.0.1-alpha.37",
+    "typescript": "^4.9.5"
+  }
+}

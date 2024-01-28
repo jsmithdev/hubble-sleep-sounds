@@ -788,10 +788,6 @@ video {
   width: 0.25rem;
 }
 
-.w-1\\/2 {
-  width: 50%;
-}
-
 .w-20 {
   width: 5rem;
 }
@@ -1483,11 +1479,6 @@ video {
   outline-offset: 2px;
 }
 
-.group:hover .group-hover\\:text-green-600 {
-  --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
-}
-
 .group:hover .group-hover\\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1509,6 +1500,14 @@ const audioData = [
         url: "https://github.com/jsmithdev/hubble-sleep-sounds/blob/main/resources/Forest.mp3?raw=true",
         color: "background-color: rgb(100 116 139)",
         duration: "02:00:00",
+    },
+    {
+        artist: "Unknown Artist",
+        track: "Lightning Drone",
+        picture: "https://images.unsplash.com/photo-1517866184231-7ef94c2ea930?q=80&w=2747&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        url: "https://github.com/jsmithdev/hubble-sleep-sounds/blob/main/resources/Lightning-Drone.mp3?raw=true",
+        color: "background-color: rgb(39, 19, 223)",
+        duration: "01:46:29",
     },
 ];
 let SleepSounds = class SleepSounds extends s {
