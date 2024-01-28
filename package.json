@@ -9,7 +9,7 @@
     "description": "Play nature and calm sounds for sleep or background noise",
     "site": "https://github.com/jsmithdev/hubble-sleep-sounds",
     "icon": "https://raw.githubusercontent.com/jsmithdev/hubble-sleep-sounds/main/resources/icon.svg?raw=true",
-    "executable": "https://unpkg.com/hubble-sleep-sounds@1.0.1/build/lit.js"
+    "executable": "https://unpkg.com/hubble-sleep-sounds@1.0.2/build/lit.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
