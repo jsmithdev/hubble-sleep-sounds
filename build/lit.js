@@ -1527,6 +1527,7 @@ let SleepSounds = class SleepSounds extends s {
         if (this.Audio)
             this.Audio.pause();
         this.Audio = new Audio(this.selected.url);
+        this.Audio.addEventListener('ended', e => this._replay());
         this.Audio.addEventListener('timeupdate', e => this._updateTime(e));
         this.Audio.addEventListener('loadedmetadata', e => {
             this.duration = new Date(this.Audio.duration * 1000).toISOString().substring(11, 19);
@@ -1558,6 +1559,10 @@ let SleepSounds = class SleepSounds extends s {
     }
     _selectSound(track) {
         this.selected = audioData.find((data) => data.track === track);
+        this._initializeAudio();
+        this._play();
+    }
+    _replay() {
         this._initializeAudio();
         this._play();
     }
